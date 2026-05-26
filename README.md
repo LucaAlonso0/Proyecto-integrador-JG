@@ -4,8 +4,14 @@ Página web que funciona como guía completa para dominar el rol de Jungla en Le
 
 ## Capturas del proyecto
 
-![Captura del sitio](IMAGENES/PORTADA-LOL.png)
-
+!Captura del sitio(IMAGENES/PORTADA-LOL.png)
+!Captura del sitio (IMAGENES/Cap1.png)
+!Captura del sitio (IMAGENES/Cap2.png)
+!Captura del sitio (IMAGENES/Cap3.png)
+!Captura del sitio (IMAGENES/Cap4.png)
+!Captura del sitio (IMAGENES/Cap5.png)
+!Captura del sitio (IMAGENES/Cap6.png)
+!Captura del sitio (IMAGENES/Cap7.png)
 ## Tecnologías utilizadas
 
 - HTML5
@@ -16,12 +22,12 @@ Página web que funciona como guía completa para dominar el rol de Jungla en Le
 
 - Paleta de colores temática de League of Legends (azul oscuro y dorado)
 - Tipografía personalizada importada desde Google Fonts
-- Variables CSS con `:root` para colores, fuentes y efectos reutilizables
+- Variables CSS con root para colores, fuentes y efectos reutilizables
 - Layout con Flexbox en el menú de navegación y en las secciones con imagen + texto
 - Grid CSS para los bloques de consejos dentro de cada sección
-- Tarjetas con `border-radius`, `box-shadow` y efecto hover con `transform`
-- Animación `@keyframes` de brillo pulsante en el título principal
-- Animación `@keyframes` de fadeIn al cargar cada sección
+- Tarjetas con border-radius, box-shadow y efecto hover con transform
+- Animación keyframes de brillo pulsante en el título principal
+- Animación keyframes de fadeIn al cargar cada sección
 - Transiciones suaves en botones, enlaces y tarjetas
 - Diseño responsive con media queries para tablet (768px) y celular (480px)
 - Menú que se reorganiza verticalmente en pantallas pequeñas
