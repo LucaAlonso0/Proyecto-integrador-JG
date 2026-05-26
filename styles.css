@@ -1,1 +1,88 @@
 /* styles.css - Guia completa de Jungla - League of Legends */
+
+/* ===== IMPORTAR FUENTES DE GOOGLE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ===== VARIABLES CSS ===== */
+:root {
+    --color-fondo: #0a1428;
+    --color-header: #091428;
+    --color-card: #1a2a3a;
+    --color-dorado: #c89b3c;
+    --color-azul: #0bc4e3;
+    --color-texto: #e8d5b7;
+    --color-texto-sec: #9a8c7a;
+    --fuente-titulo: 'Cinzel', serif;
+    --fuente-texto: 'Open Sans', sans-serif;
+    --radio-borde: 10px;
+    --sombra-dorada: 0 4px 20px rgba(200, 155, 60, 0.25);
+}
+
+/* ===== RESET Y BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulo);
+    color: var(--color-dorado);
+    margin-bottom: 0.8rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-dorada);
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--color-header);
+    border-bottom: 2px solid var(--color-dorado);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 15px rgba(200, 155, 60, 0.3);
+}
+
+/* ===== MAIN ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ===== SECCIONES ===== */
+section {
+    background-color: var(--color-card);
+    border: 1px solid rgba(200, 155, 60, 0.35);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--sombra-dorada);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--color-header);
+    border-top: 2px solid var(--color-dorado);
+    color: var(--color-texto-sec);
+    text-align: center;
+    padding: 1.5rem;
+    font-family: var(--fuente-titulo);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-radius: var(--radio-borde) var(--radio-borde) 0 0;
+}
