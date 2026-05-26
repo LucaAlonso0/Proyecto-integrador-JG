@@ -1,9 +1,4 @@
-/* styles.css - Guia completa de Jungla - League of Legends */
-
-/* ===== IMPORTAR FUENTES DE GOOGLE ===== */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
-
-/* ===== VARIABLES CSS ===== */
 :root {
     --color-fondo: #0a1428;
     --color-header: #091428;
@@ -19,7 +14,6 @@
     --transicion: all 0.3s ease;
 }
 
-/* ===== RESET Y BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +28,10 @@ body {
     line-height: 1.7;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--fuente-titulo);
     color: var(--color-dorado);
     margin-bottom: 0.8rem;
@@ -50,7 +47,6 @@ img {
     box-shadow: var(--sombra-dorada);
 }
 
-/* ===== HEADER ===== */
 header {
     background-color: var(--color-header);
     border-bottom: 2px solid var(--color-dorado);
@@ -58,7 +54,6 @@ header {
     box-shadow: 0 2px 15px rgba(200, 155, 60, 0.3);
 }
 
-/* ===== PORTADA / HERO ===== */
 .img-portada {
     width: 100%;
     max-height: 420px;
@@ -89,6 +84,28 @@ header {
     font-style: italic;
 }
 
+/* ===== ANIMACIONES ===== */
+@keyframes brillo {
+    0%   { text-shadow: 0 0 8px rgba(200, 155, 60, 0.4); }
+    50%  { text-shadow: 0 0 25px rgba(200, 155, 60, 0.9), 0 0 50px rgba(200, 155, 60, 0.4); }
+    100% { text-shadow: 0 0 8px rgba(200, 155, 60, 0.4); }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portada-texto h1 {
+    animation: brillo 3s infinite ease-in-out;
+}
+
 /* ===== MAIN ===== */
 main {
     max-width: 1100px;
@@ -96,7 +113,6 @@ main {
     padding: 2rem;
 }
 
-/* ===== SECCIONES ===== */
 section {
     background-color: var(--color-card);
     border: 1px solid rgba(200, 155, 60, 0.35);
@@ -105,6 +121,7 @@ section {
     margin-bottom: 2rem;
     box-shadow: var(--sombra-dorada);
     transition: var(--transicion);
+    animation: fadeIn 0.6s ease both;
 }
 
 section:hover {
@@ -113,7 +130,6 @@ section:hover {
     transform: translateY(-3px);
 }
 
-/* ===== FLEXBOX - NAV HORIZONTAL ===== */
 header nav ul {
     display: flex;
     list-style: none;
@@ -138,7 +154,6 @@ header nav ul li a:hover {
     box-shadow: 0 0 10px rgba(200, 155, 60, 0.2);
 }
 
-/* ===== FLEXBOX - IMAGEN + TEXTO EN SECCIONES ===== */
 .seccion-fila {
     display: flex;
     gap: 2rem;
@@ -157,7 +172,6 @@ header nav ul li a:hover {
     min-width: 260px;
 }
 
-/* ===== GRID - CARDS DE TIPS ===== */
 .tips-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -192,7 +206,6 @@ header nav ul li a:hover {
     margin: 0;
 }
 
-/* ===== BOTON ENVIAR ===== */
 input[type="submit"] {
     background-color: var(--color-dorado);
     color: var(--color-fondo);
@@ -214,7 +227,6 @@ input[type="submit"]:hover {
     box-shadow: 0 6px 25px rgba(200, 155, 60, 0.6);
 }
 
-/* ===== FOOTER ===== */
 footer {
     background-color: var(--color-header);
     border-top: 2px solid var(--color-dorado);
