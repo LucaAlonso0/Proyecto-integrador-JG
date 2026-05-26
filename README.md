@@ -4,14 +4,14 @@ Página web que funciona como guía completa para dominar el rol de Jungla en Le
 
 ## Capturas del proyecto
 
-!Captura del sitio(IMAGENES/PORTADA-LOL.png)
-!Captura del sitio (IMAGENES/Cap1.png)
-!Captura del sitio (IMAGENES/Cap2.png)
-!Captura del sitio (IMAGENES/Cap3.png)
-!Captura del sitio (IMAGENES/Cap4.png)
-!Captura del sitio (IMAGENES/Cap5.png)
-!Captura del sitio (IMAGENES/Cap6.png)
-!Captura del sitio (IMAGENES/Cap7.png)
+![Captura del sitio](IMAGENES/PORTADA-LOL.png)
+![Captura del sitio](IMAGENES/Cap1.png)
+![Captura del sitio](IMAGENES/Cap2.png)
+![Captura del sitio](IMAGENES/Cap3.png)
+![Captura del sitio](IMAGENES/Cap4.png)
+![Captura del sitio](IMAGENES/Cap5.png)
+![Captura del sitio](IMAGENES/Cap6.png)
+![Captura del sitio](IMAGENES/Cap7.png)
 ## Tecnologías utilizadas
 
 - HTML5
