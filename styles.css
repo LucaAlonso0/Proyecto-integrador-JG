@@ -57,6 +57,37 @@ header {
     box-shadow: 0 2px 15px rgba(200, 155, 60, 0.3);
 }
 
+/* ===== PORTADA / HERO ===== */
+.img-portada {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.portada-texto {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(to bottom, #0d1f36, var(--color-fondo));
+}
+
+.img-jg {
+    display: block;
+    width: 100%;
+    max-width: 680px;
+    margin: 1rem auto;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-dorada);
+}
+
+.portada-texto h3 {
+    color: var(--color-azul);
+    font-size: 1rem;
+    font-style: italic;
+}
+
 /* ===== MAIN ===== */
 main {
     max-width: 1100px;
