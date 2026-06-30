@@ -1,27 +1,24 @@
-// Array de campeones de jungla
 const campeonesJG = [
-    { nombre: "Warwick",     tipo: "Tanque/Luchador",  dificultad: "Fácil"   },
-    { nombre: "Amumu",       tipo: "Tanque/Mago",       dificultad: "Fácil"   },
-    { nombre: "Nocturne",    tipo: "Asesino",           dificultad: "Fácil"   },
-    { nombre: "Maestro Yi",  tipo: "Luchador",          dificultad: "Fácil"   },
-    { nombre: "Vi",          tipo: "Luchador",          dificultad: "Media"   },
-    { nombre: "Hecarim",     tipo: "Luchador",          dificultad: "Media"   },
-    { nombre: "Kayn",        tipo: "Luchador/Asesino",  dificultad: "Media"   },
-    { nombre: "Lillia",      tipo: "Mago/Luchador",     dificultad: "Media"   },
-    { nombre: "Lee Sin",     tipo: "Luchador",          dificultad: "Difícil" },
-    { nombre: "Nidalee",     tipo: "Asesino/Mago",      dificultad: "Difícil" },
-    { nombre: "Evelynn",     tipo: "Asesino/Mago",      dificultad: "Difícil" },
-    { nombre: "Kindred",     tipo: "Tirador",           dificultad: "Difícil" }
+    { nombre: "Warwick", tipo: "Tanque/Luchador", dificultad: "Fácil" },
+    { nombre: "Amumu", tipo: "Tanque/Mago", dificultad: "Fácil" },
+    { nombre: "Nocturne", tipo: "Asesino", dificultad: "Fácil" },
+    { nombre: "Maestro Yi", tipo: "Luchador", dificultad: "Fácil" },
+    { nombre: "Vi", tipo: "Luchador", dificultad: "Media" },
+    { nombre: "Hecarim", tipo: "Luchador", dificultad: "Media" },
+    { nombre: "Kayn", tipo: "Luchador/Asesino", dificultad: "Media" },
+    { nombre: "Lillia", tipo: "Mago/Luchador", dificultad: "Media" },
+    { nombre: "Lee Sin", tipo: "Luchador", dificultad: "Difícil" },
+    { nombre: "Nidalee", tipo: "Asesino/Mago", dificultad: "Difícil" },
+    { nombre: "Evelynn", tipo: "Asesino/Mago", dificultad: "Difícil" },
+    { nombre: "Kindred", tipo: "Tirador/Asesino", dificultad: "Difícil" }
 ];
 
-// Normaliza texto quitando tildes para comparaciones
 function normalizarTexto(texto) {
     return texto.toLowerCase()
         .replace(/á/g, "a").replace(/é/g, "e")
         .replace(/í/g, "i").replace(/ó/g, "o").replace(/ú/g, "u");
 }
 
-// Actualiza el texto del contador de resultados
 function actualizarContador(cantidad) {
     const contador = document.getElementById("contador-campeones");
     const total = campeonesJG.length;
@@ -29,7 +26,6 @@ function actualizarContador(cantidad) {
     contador.style.color = cantidad === 0 ? "#f44336" : "var(--color-texto-sec)";
 }
 
-// Crea y muestra las cards de campeones en el DOM
 function renderizarCampeones(lista) {
     const contenedor = document.getElementById("lista-campeones");
     contenedor.innerHTML = "";
@@ -65,7 +61,6 @@ function renderizarCampeones(lista) {
     });
 }
 
-// Array de consejos de jungla
 const consejosJG = [
     "Trackea al jungla enemigo para anticipar sus ganks.",
     "Coloca wards antes de intentar objetivos como el Dragón o el Barón.",
@@ -79,7 +74,6 @@ const consejosJG = [
     "Prioriza las líneas con ventaja para gankear primero."
 ];
 
-// Muestra un consejo aleatorio del array en el DOM
 function mostrarConsejoAleatorio() {
     const indice = Math.floor(Math.random() * consejosJG.length);
     const consejo = consejosJG[indice];
@@ -88,28 +82,26 @@ function mostrarConsejoAleatorio() {
     contenedor.classList.remove("oculto");
 }
 
-// Filtra el array de campeones según lo que escribe el usuario
 function buscarCampeon() {
     const termino = normalizarTexto(document.getElementById("input-buscar").value);
     const filtrados = campeonesJG.filter(function(campeon) {
         return normalizarTexto(campeon.nombre).includes(termino) ||
-               normalizarTexto(campeon.tipo).includes(termino) ||
-               normalizarTexto(campeon.dificultad).includes(termino);
+            normalizarTexto(campeon.tipo).includes(termino) ||
+            normalizarTexto(campeon.dificultad).includes(termino);
     });
     renderizarCampeones(filtrados);
 }
 
-// Valida el formulario de contacto y muestra mensajes de error en el DOM
 function validarFormulario(e) {
     e.preventDefault();
 
-    const nickname  = document.getElementById("input-nickname");
-    const email     = document.getElementById("input-email");
-    const errNick   = document.getElementById("error-nickname");
-    const errEmail  = document.getElementById("error-email");
-    const exito     = document.getElementById("form-exito");
+    const nickname = document.getElementById("input-nickname");
+    const email = document.getElementById("input-email");
+    const errNick = document.getElementById("error-nickname");
+    const errEmail = document.getElementById("error-email");
+    const exito = document.getElementById("form-exito");
 
-    errNick.textContent  = "";
+    errNick.textContent = "";
     errEmail.textContent = "";
     exito.classList.add("oculto");
 
