@@ -243,6 +243,25 @@ footer {
     border-radius: var(--radio-borde) var(--radio-borde) 0 0;
 }
 
+/* ── Formulario: errores y éxito ── */
+.error-msg {
+    color: #f44336;
+    font-size: 0.83rem;
+    display: block;
+    margin-bottom: 0.6rem;
+    min-height: 1em;
+}
+
+#form-exito {
+    background-color: rgba(76, 175, 80, 0.15);
+    border-left: 4px solid #4caf50;
+    color: #4caf50;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0 var(--radio-borde) var(--radio-borde) 0;
+    margin-bottom: 1rem;
+    font-family: var(--fuente-titulo);
+}
+
 /* ── Consejo aleatorio ── */
 #consejo-container {
     margin-top: 1.5rem;

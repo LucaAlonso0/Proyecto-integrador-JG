@@ -178,19 +178,21 @@
             <iframe src="https://www.youtube.com/embed/uTzNs4gULUc" height="600" width="1000" frameborder="0"></iframe><br><br><br>
             <h1>Cuentanos como te ha ido y dejanos tu experiencia!</h1>
         </section>
-        <form action="">
+        <form id="formulario-contacto" action="">
             <fieldset>
                 <legend>Deja tu nickname</legend><br>
-                <label for="Nombre">Nickname:</label><br>
-                <input type="text" placeholder="Ingrese su nick" required><br><br>
-                <label for="Email">Email:</label><br>
-                <input type="text" placeholder="Ingrese su email" required><br><br>
+                <label for="input-nickname">Nickname:</label><br>
+                <input type="text" id="input-nickname" placeholder="Ingrese su nick"><br>
+                <span class="error-msg" id="error-nickname"></span><br>
+                <label for="input-email">Email:</label><br>
+                <input type="text" id="input-email" placeholder="Ingrese su email"><br>
+                <span class="error-msg" id="error-email"></span><br>
             </fieldset><br><br>
             <fieldset>
                 <legend>Cuentanos que elo eres y que deseas mejorar!</legend>
-                <textarea rows="3" col="8" maxlength="200" placeholder="Escriba aqui"></textarea>
-
+                <textarea id="input-comentario" rows="3" col="8" maxlength="200" placeholder="Escriba aqui"></textarea>
             </fieldset><br>
+            <div id="form-exito" class="oculto"></div>
             <input type="submit" value="Enviar">
         </form><br><br>
     </main>

@@ -90,9 +90,57 @@ function buscarCampeon() {
     renderizarCampeones(filtrados);
 }
 
+// Valida el formulario de contacto y muestra mensajes de error en el DOM
+function validarFormulario(e) {
+    e.preventDefault();
+
+    const nickname  = document.getElementById("input-nickname");
+    const email     = document.getElementById("input-email");
+    const errNick   = document.getElementById("error-nickname");
+    const errEmail  = document.getElementById("error-email");
+    const exito     = document.getElementById("form-exito");
+
+    errNick.textContent  = "";
+    errEmail.textContent = "";
+    exito.classList.add("oculto");
+
+    let valido = true;
+
+    try {
+        if (nickname.value.trim() === "") {
+            throw new Error("El nickname no puede estar vacío.");
+        }
+        if (nickname.value.trim().length < 3) {
+            throw new Error("El nickname debe tener al menos 3 caracteres.");
+        }
+    } catch (error) {
+        errNick.textContent = error.message;
+        valido = false;
+    }
+
+    try {
+        if (email.value.trim() === "") {
+            throw new Error("El email no puede estar vacío.");
+        }
+        if (!email.value.includes("@") || !email.value.includes(".")) {
+            throw new Error("Ingresá un email válido.");
+        }
+    } catch (error) {
+        errEmail.textContent = error.message;
+        valido = false;
+    }
+
+    if (valido) {
+        exito.textContent = "¡Gracias " + nickname.value.trim() + "! Tu comentario fue enviado.";
+        exito.classList.remove("oculto");
+        document.getElementById("formulario-contacto").reset();
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     renderizarCampeones(campeonesJG);
 
     document.getElementById("input-buscar").addEventListener("input", buscarCampeon);
     document.getElementById("btn-consejo").addEventListener("click", mostrarConsejoAleatorio);
+    document.getElementById("formulario-contacto").addEventListener("submit", validarFormulario);
 });
