@@ -56,6 +56,19 @@ function renderizarCampeones(lista) {
     });
 }
 
+// Filtra el array de campeones según lo que escribe el usuario
+function buscarCampeon() {
+    const termino = normalizarTexto(document.getElementById("input-buscar").value);
+    const filtrados = campeonesJG.filter(function(campeon) {
+        return normalizarTexto(campeon.nombre).includes(termino) ||
+               normalizarTexto(campeon.tipo).includes(termino) ||
+               normalizarTexto(campeon.dificultad).includes(termino);
+    });
+    renderizarCampeones(filtrados);
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     renderizarCampeones(campeonesJG);
+
+    document.getElementById("input-buscar").addEventListener("input", buscarCampeon);
 });
