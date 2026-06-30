@@ -21,10 +21,19 @@ function normalizarTexto(texto) {
         .replace(/í/g, "i").replace(/ó/g, "o").replace(/ú/g, "u");
 }
 
+// Actualiza el texto del contador de resultados
+function actualizarContador(cantidad) {
+    const contador = document.getElementById("contador-campeones");
+    const total = campeonesJG.length;
+    contador.textContent = "Mostrando " + cantidad + " de " + total + " campeones";
+    contador.style.color = cantidad === 0 ? "#f44336" : "var(--color-texto-sec)";
+}
+
 // Crea y muestra las cards de campeones en el DOM
 function renderizarCampeones(lista) {
     const contenedor = document.getElementById("lista-campeones");
     contenedor.innerHTML = "";
+    actualizarContador(lista.length);
 
     if (lista.length === 0) {
         const mensaje = document.createElement("p");
@@ -134,6 +143,20 @@ function validarFormulario(e) {
         exito.textContent = "¡Gracias " + nickname.value.trim() + "! Tu comentario fue enviado.";
         exito.classList.remove("oculto");
         document.getElementById("formulario-contacto").reset();
+
+        const btnEnviar = document.querySelector("#formulario-contacto input[type='submit']");
+        btnEnviar.value = "¡Enviado!";
+        btnEnviar.disabled = true;
+        btnEnviar.style.opacity = "0.5";
+        btnEnviar.style.cursor = "not-allowed";
+
+        setTimeout(function() {
+            btnEnviar.value = "Enviar";
+            btnEnviar.disabled = false;
+            btnEnviar.style.opacity = "1";
+            btnEnviar.style.cursor = "pointer";
+            exito.classList.add("oculto");
+        }, 3000);
     }
 }
 

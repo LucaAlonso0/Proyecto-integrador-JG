@@ -365,6 +365,13 @@ footer {
 .dif-media   { color: #ff9800; font-weight: 700; }
 .dif-dificil { color: #f44336; font-weight: 700; }
 
+.contador {
+    font-size: 0.82rem;
+    color: var(--color-texto-sec);
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
 .sin-resultados {
     color: var(--color-texto-sec);
     font-style: italic;
