@@ -243,6 +243,77 @@ footer {
     border-radius: var(--radio-borde) var(--radio-borde) 0 0;
 }
 
+/* ── Buscador de campeones ── */
+#buscador-campeones {
+    margin-top: 2rem;
+}
+
+#input-buscar {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background-color: #0d1f36;
+    border: 1px solid var(--color-dorado);
+    border-radius: var(--radio-borde);
+    color: var(--color-texto);
+    font-family: var(--fuente-texto);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: var(--transicion);
+}
+
+#input-buscar:focus {
+    border-color: var(--color-azul);
+    box-shadow: 0 0 10px rgba(11, 196, 227, 0.3);
+}
+
+#input-buscar::placeholder {
+    color: var(--color-texto-sec);
+}
+
+.campeones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 1rem;
+}
+
+.campeon-card {
+    background-color: rgba(200, 155, 60, 0.07);
+    border: 1px solid rgba(200, 155, 60, 0.3);
+    border-radius: var(--radio-borde);
+    padding: 1rem;
+    transition: var(--transicion);
+    cursor: default;
+}
+
+.campeon-card h4 {
+    color: var(--color-dorado);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.campeon-card p {
+    font-size: 0.83rem;
+    margin: 0.2rem 0;
+}
+
+.etiqueta {
+    font-weight: 600;
+    color: var(--color-texto-sec);
+}
+
+.dif-facil   { color: #4caf50; font-weight: 700; }
+.dif-media   { color: #ff9800; font-weight: 700; }
+.dif-dificil { color: #f44336; font-weight: 700; }
+
+.sin-resultados {
+    color: var(--color-texto-sec);
+    font-style: italic;
+    text-align: center;
+    padding: 1rem;
+    grid-column: 1 / -1;
+}
+
 @media (max-width: 768px) {
     .portada-texto h1 {
         font-size: 1.8rem;
