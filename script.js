@@ -56,6 +56,29 @@ function renderizarCampeones(lista) {
     });
 }
 
+// Array de consejos de jungla
+const consejosJG = [
+    "Trackea al jungla enemigo para anticipar sus ganks.",
+    "Coloca wards antes de intentar objetivos como el Dragón o el Barón.",
+    "Farmea eficientemente entre ganks para no quedarte atrás en nivel.",
+    "Comunica a tu equipo con pings cuando vayas a gankear.",
+    "Si el jungla enemigo gankea top, aprovecha para hacer Dragón.",
+    "Nunca fuerces un objetivo si no sabés dónde está el jungla rival.",
+    "El Smite es tu hechizo más importante — usalo sabiamente.",
+    "Aprendé los tiempos de reaparición de los campamentos.",
+    "Invadir la jungla enemiga puede darle ventaja a tu equipo.",
+    "Prioriza las líneas con ventaja para gankear primero."
+];
+
+// Muestra un consejo aleatorio del array en el DOM
+function mostrarConsejoAleatorio() {
+    const indice = Math.floor(Math.random() * consejosJG.length);
+    const consejo = consejosJG[indice];
+    const contenedor = document.getElementById("consejo-resultado");
+    contenedor.textContent = "💡 " + consejo;
+    contenedor.classList.remove("oculto");
+}
+
 // Filtra el array de campeones según lo que escribe el usuario
 function buscarCampeon() {
     const termino = normalizarTexto(document.getElementById("input-buscar").value);
@@ -71,4 +94,5 @@ document.addEventListener("DOMContentLoaded", function() {
     renderizarCampeones(campeonesJG);
 
     document.getElementById("input-buscar").addEventListener("input", buscarCampeon);
+    document.getElementById("btn-consejo").addEventListener("click", mostrarConsejoAleatorio);
 });
