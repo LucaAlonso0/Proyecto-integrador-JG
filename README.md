@@ -16,6 +16,7 @@ Página web que funciona como guía completa para dominar el rol de Jungla en Le
 
 - HTML5
 - CSS3 (Flexbox, Grid, animaciones, media queries)
+- JavaScript (DOM, eventos, arrays, validaciones)
 - Google Fonts (Cinzel + Open Sans)
 
 ## Mejoras visuales incorporadas
@@ -43,3 +44,16 @@ Página web que funciona como guía completa para dominar el rol de Jungla en Le
 - Sección de conocimiento del mapa y uso de wards
 - Video demostrativo del mejor jungla de europa
 - Formulario de contacto para dejar nickname, email y experiencia
+
+## Funcionalidades JavaScript implementadas
+
+- **Buscador de campeones de jungla:** filtra en tiempo real una lista de 12 campeones por nombre, tipo o dificultad usando un array de objetos y el evento `input`.
+- **Consejo aleatorio:** botón que selecciona aleatoriamente un consejo del array `consejosJG` y lo muestra en pantalla mediante el evento `click`.
+- **Validación del formulario:** el formulario verifica que el nickname y el email no estén vacíos y que el email tenga formato válido. Usa bloques `try/catch` para el manejo de errores y muestra mensajes de error debajo de cada campo. Evento `submit`.
+- **Contador dinámico:** muestra "Mostrando X de 12 campeones" en tiempo real y cambia de color si no hay resultados.
+- **Feedback visual en el botón de envío:** al enviar el formulario correctamente, el botón cambia de texto, se deshabilita y se restaura automáticamente a los 3 segundos.
+- **Renderizado dinámico del DOM:** las cards de campeones se crean programáticamente con `createElement` a partir del array, sin HTML estático.
+
+## Enlace al repositorio
+
+https://github.com/LucaAlonso0/ProyectoIntegrador
